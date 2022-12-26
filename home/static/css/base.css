@@ -1,0 +1,97 @@
+body {
+    background-color: #F4F4F1;
+}
+
+#navbar-base {
+    background-color: #12213F;
+    /* 12213F */
+}
+
+#btn {
+    background-color: #f8f4ee;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    height: 100%;
+    padding: revert;
+
+}
+
+#btn:hover {
+    background-color: #f7dd8b;
+    color: #000;
+}
+#card-login {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    
+}
+#card-add {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    width: 40%;
+    justify-content: center;
+}
+.card-header {
+    background-color: #2D82B2;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+}
+
+.card-body {
+    justify-content: start;  
+}
+
+
+.flex-container {
+
+    display: flex;
+
+    justify-content: center;     
+    padding: 15px;
+    gap: 5px;
+
+}
+
+.flex-container > div{
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    padding: 8px;
+}
+
+#card1 { 
+    /* flex:0 1 300px; */
+    flex-basis: 1000px;
+    height: 100%;
+}
+        
+#card2 { 
+    /* flex:0 1 10%; */
+    flex-shrink:1;
+    flex-basis:25%;
+    height: 25rem;
+    
+}
+
+.card-text {
+    text-overflow: ellipsis; /* เพิ่ม ... จุดจุดจุดท้ายสุด */ 
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+
+.form-check {
+    font-size: 15px;
+}
+
+#star {
+    color: #848623;
+}
+
+
+
+

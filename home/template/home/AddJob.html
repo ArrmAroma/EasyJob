@@ -1,0 +1,68 @@
+{% extends "../base.html" %}
+{% load static %}
+{% block title %}AddJob{% endblock %}
+
+{% block content %}
+
+<div class="container d-flex justify-content-md-center" >
+    <div class="card" id="card-add">
+        <div class="card-header text-center">
+            <h5>ลงประกาศงาน</h5>
+        </div>
+        <div class="card-body">
+            <form action="/AddJob" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">*ตำแหน่งงาน*</label>
+                    <input type="" class="form-control" name="job_title" id="" >
+                </div>
+                
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">*จำนวน*</label>
+                    <input type="" class="form-control" name="quantity" id="">
+                </div>
+                
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">*GPA*</label>
+                    <input type="" class="form-control" name="gpa" id="" >
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">*เงินเดือน'*</label>
+                    <input type="" class="form-control" name="salary" id="" >
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">*รายละเอียดงาน*</label>
+                    <input type="" class="form-control" name="description" id="" >
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">*คุณสมบัติ'*</label>
+                    <input type="" class="form-control" name="property" id="" >
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">*สวัสดิการ*</label>
+                    <input type="" class="form-control" name="welfare" id="" >
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">*LOGO*</label><br>
+                    <input type="file" id="avatar" name="logo" accept="image/png, image/jpeg">
+                </div>
+
+                <div class="d-grid gap-4 mt-4 d-md-flex justify-content-md-start">
+                    <button type="button" class="btn btn-danger me-md-2">
+                        <a href="/myjob"><span class="text-light">ยกเลิก</span></a>
+                    </button>
+                    
+                    <button class="btn btn-success" type="submit">ตกลง</button>
+                </div>
+            
+            </form>
+        </div>
+    </div>     
+</div>
+
+{% endblock %}

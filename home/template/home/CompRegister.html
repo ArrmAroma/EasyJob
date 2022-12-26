@@ -1,0 +1,58 @@
+{% extends "../base.html" %}
+{% load static %}
+{% block title %}CompRegister{% endblock %}
+
+{% block content %}
+
+    <div class="container d-flex justify-content-md-center">
+        <div class="card" id="card-login">
+            <div class="card-header text-center">
+                <h5>ลงทะเบียนผู้ประกอบการ</h5>
+            </div>
+            <div class="card-body">
+                <form action="/CompRegister" method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">*Email*</label>
+                        <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">*Password*</label>
+                        <input type="password" class="form-control" name="password" id="">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">*ชื่อบริษัท*</label>
+                        <input type="text" class="form-control" name="compname" id="" >
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">*ประเภทธุรกิจ*</label>
+                        <input type="text" class="form-control"  name="category" id="" >
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">*เบอร์ติดต่อ*</label>
+                        <input type="text" class="form-control" name="phone" id="" >
+                    </div>
+                
+                
+                    <div class="d-grid gap-4 mt-4 d-md-flex justify-content-md-start">
+                        <button class="btn btn-danger text-light me-md-2" type="button">ยกเลิก</button>
+                        <button class="btn btn-success" type="submit">ตกลง</button>
+                    </div>
+                </form>    
+                
+            </div>
+            <div class="card-footer gap-4 mt-4 d-md-flex justify-content-md-start">
+                <a href="/login" class="">เข้าสู่ระบบ</a>
+                <a href="/register" class="">สมัครสมาชิก</a>
+            </div>
+        </div>     
+    </div>   
+      
+    
+    
+
+{% endblock %}

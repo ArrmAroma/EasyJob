@@ -1,0 +1,46 @@
+{% extends "../base.html" %}
+{% load static %}
+{% block title %}Register{% endblock %}
+
+{% block content %}
+
+    <div class="container d-flex justify-content-md-center">
+        <div class="card" id="card-login">
+            <div class="card-header text-center">
+                <h5>สมัครสมาชิก</h5>
+            </div>
+            
+            <div class="card-body">
+                <form action="/Register" method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">*๊Username*</label>
+                        <input type="Username" class="form-control" name="username" id="" >
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">*Email*</label>
+                        <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">*Password*</label>
+                        <input type="password" class="form-control" name="password" id="" >
+                    </div>
+
+                    <div class="d-grid gap-4 mt-4 d-md-flex justify-content-md-start">
+                        <button class="btn btn-danger text-light me-md-2" type="button">ยกเลิก</button>
+                        <button class="btn btn-success" type="submit">ตกลง</button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer gap-4 mt-4 d-md-flex justify-content-md-start">
+                <a href="/login" class="">เข้าสู่ระบบ</a>
+                <a href="/CompRegister" class="">ลงทะเบียนผู้ประกอบการ</a>
+            </div>
+        </div>     
+    </div>   
+      
+    
+
+{% endblock %}
